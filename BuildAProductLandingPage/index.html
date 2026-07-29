@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An Example of Product Landing Page by Agnese Salutari">
+  <meta name="author" content="Agnese Salutari">
+  <title>Product Landing Page</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header id="header">
+    <div id="identity">
+      <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/3/39/FreeCodeCamp_logo.png?_=20191220141126" alt="freeCodeCamp logo" loading="lazy">
+      <h1 class="title">Agnese Salutari's Fictional Products</h1>
+    </div>
+
+    <nav id="nav-bar" aria-label="Main navigation">
+      <a class="nav-link" href="#welcome">Welcome</a>
+      <a class="nav-link" href="#our-products">Our Products</a>
+      <a class="nav-link" href="#about-us">About Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div id="sections">
+      <section id="welcome">
+        <h2>Agnese Salutari's Example of a Product Landing Page</h2>
+        <div class="intro">
+          <p>This is a fictional Product Landing Page by Agnese Salutari.</p>
+        </div>
+        <form id="form" action="https://www.freecodecamp.org/email-submit" method="POST">
+          <h2>Join our mailing list!</h2>
+          <label for="email">Email:<input id="email" type="email" name="email" placeholder="E.g. agneses92@gmail.com"></label>
+          <input id="submit" type="submit" value="Submit">
+        </form>
+      </section>
+
+      <section id="our-products">
+        <h2>Our Products</h2>
+        <div class="intro">
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
+          <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.</p>
+          <p>Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</p>
+        </div>
+
+        <div id="product-cards">
+          <article class="product">
+            <h3>Product0</h3>
+            <div class="product-description">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+            </div>
+          </article>
+          <article class="product">
+            <h3>Product1</h3>
+            <div class="product-description">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+            </div>
+          </article>
+          <article class="product">
+            <h3>Product2</h3>
+            <div class="product-description">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+              <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+          </article>
+          <article class="product">
+            <h3>Product3</h3>
+            <div class="product-description">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.</p>
+            </div>
+          </article>
+        </div>
+
+        <article class="promo-video">
+          <h3 id="video-description">Explore our catalog!</h3>
+          <video id="video" controls loop autoplay muted aria-labelledby="video-description">
+            <source src="../docs/videos/Video0.mp4" type="video/mp4">
+          </video>
+        </article>
+
+      </section>
+
+      <section id="about-us">
+        <h2>About Us</h2>
+          <div class="description">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+                  Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a,
+                  venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+                  Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat
+                  vitae, eleifend ac, enim.</p>
+            <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
+                  laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
+                  ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+            <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
+                  Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus.</p>
+            <p>Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+                  Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum
+                  sodales, augue velit cursus nunc,</p>
+          </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="shadowed-txt">
+    <address id="contacts">
+      <p class="identity">Agnese Salutari's Fictional Products</p>
+      <p>Visit my
+        <a id="ecommerce-link" href="https://www.github.com/agnsal" target="_blank" rel="noopener noreferrer">Ecommerce</a>
+      and enjoy my products.
+      </p>
+    </address>
+
+    <p class="note">**This is just a fake product landing page by Agnese Salutari. All the products and contact details given are not real.</p>
+  </footer>
+
+</body>
+
+</html>
