@@ -6,7 +6,12 @@
     --color-tertiary: #460D4E;
     --color-light-0: #F7F4E4;
     --color-light-1: #EBEDF2;
+
+    --color-feedback-success: var(--color-secondary);
 }
+
+
+/* General */
 
 *,
 *::before,
@@ -17,7 +22,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: "Noto Sans Display", sans-serif;
     font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
     min-height: 320px;
     background-color: var(--color-light-0);
@@ -25,9 +30,14 @@ html {
     width: 100%;
 }
 
-body {
-    width: 100%;
-    font-size: inherit;
+
+
+
+/* Header */
+
+h1,
+#welcome > h2 {
+    font-family: "Stack Sans Notch", sans-serif;
 }
 
 #header,
@@ -48,8 +58,9 @@ footer {
     position: fixed;
     top: 0;
     z-index: 1;
-    height: 10svh;
+    min-height: 10svh;
     display: inline-flex;
+    overflow-x: auto;
 }
 
 #identity {
@@ -97,7 +108,19 @@ footer {
     border-color: var(--color-secondary);
     font-size: clamp(0.5rem, 0.5vw + 0.5rem, 2rem);
 }
+#nav-bar a:hover,
+#nav-bar a:focus {
+    box-shadow: 0 0 0.5em var(--color-secondary);
+    transform: scale(110%);
+    outline-color: var(--color-secondary);
+    outline-offset: 0.2em;
+}
+#nav-bar a:active {
+    text-shadow: 0 0 0.5em var(--color-secondary);
+}
 
+
+/* Main */
 
 main {
     width: 100%;
@@ -128,7 +151,8 @@ main {
 }
 
 form {
-    width: 50%;
+    /*width: 50%;*/
+    width: min(40rem, 90%);
     min-width: fit-content;
     padding: 1em;
     text-align: center;
@@ -142,11 +166,8 @@ form {
     justify-content: center;
 }
 form h2 {
-    margin: 1em 0;
     text-transform: capitalize;
-    border-bottom: 1px solid var(--color-primary);
     width: 100%;
-    padding-bottom: 1em;
 }
 #email {
     margin: 0.3em auto;
@@ -155,21 +176,32 @@ form h2 {
     color: var(--color-primary);
     background-color: var(--color-light-1);
     text-align: center;
-    height: 2em;
+    font-size: 1em;
+    padding: 0.5em;
     width: 100%;
     min-width: fit-content;
     vertical-align: center;
 }
+#email:valid {
+    border-color: var(--color-feedback-success);
+}
 #submit {
-    background-color: var(--color-secondary);
+    background: linear-gradient(45deg, var(--color-secondary) 48%, var(--color-light-0), var(--color-secondary) 52%);
+    /*background-color: var(--color-secondary);*/
     color: var(--color-primary);
     border-color: var(--color-primary);
     margin-top: 1.5em;
     font-size: 1em;
+    background-size: 900% 900%;
+    animation: cta-btn-blink 2s linear 2;
 }
 #submit:hover,
 button:hover {
     cursor: pointer;
+}
+#submit:hover,
+#submit:focus {
+    animation: cta-btn-blink 2s linear infinite;
 }
 
 #our-products h2,
@@ -187,17 +219,25 @@ button:hover {
 .product {
     border: 2px solid var(--color-primary);
     border-radius: 1em;
+    padding: 1em;
 }
 .product h3 {
     text-align: center;
     padding: 1em;
     width: 100%;
-    border-bottom: 1px solid var(--color-primary);
 }
 .product-description {
     padding: 1em;
 }
 
+hr {
+    width: 100%;
+    height: 0.3em;
+    margin-bottom: 1em;
+    border: none;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    border-radius: 70% 0 70% 0;
+}
 
 .promo-video{
     margin: 10svh auto 15svh auto;
@@ -222,6 +262,7 @@ button:hover {
 }
 
 
+/* Footer */
 
 footer,
 footer a {
@@ -237,6 +278,45 @@ footer {
     font-size: 0.8em;
 }
 
+
+
+/* Animations */
+
+@keyframes cta-btn-blink {
+
+    from {
+        background-position: 100% 50%;
+    }
+
+    to {
+        background-position: 0 50%;
+    }
+
+
+}
+
+
+
+/* Media Queries */
+
+@media (prefers-reduced-motion:no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        /*animation-duration: 0.01ms !important;*/
+        /*animation-iteration-count: 1 !important;*/
+        /*transition-duration: 0.01ms !important;*/
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
 
 @media screen and (max-width: 600px) {
 
