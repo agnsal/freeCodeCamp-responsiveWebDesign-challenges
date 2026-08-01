@@ -37,7 +37,7 @@ Enjoy my solutions and experiments!
       <img src="docs/screenshots/Screenshot14.png" width="300">
       <img src="docs/screenshots/Screenshot15.png" width="300">
       <img src="docs/screenshots/Screenshot16.png" width="300">
-      <img src="docs/screenshots/Screenshot17.png" width="200">
+      <img src="docs/screenshots/Screenshot17.png" height="200">
       <img src="docs/screenshots/Screenshot18.png" height="200">
    </div>
 
