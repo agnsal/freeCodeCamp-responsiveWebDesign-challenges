@@ -6,8 +6,9 @@
     --color-tertiary: #460D4E;
     --color-light-0: #F7F4E4;
     --color-light-1: #EBEDF2;
-
     --color-feedback-success: var(--color-secondary);
+
+    --size-header-height: 10svh;
 }
 
 
@@ -24,13 +25,11 @@
 html {
     font-family: "Noto Sans Display", sans-serif;
     font-size: clamp(1rem, 1vw + 0.5rem, 1.25rem);
-    min-height: 320px;
+    min-width: 320px;
     background-color: var(--color-light-0);
     color: var(--color-primary);
     width: 100%;
 }
-
-
 
 
 /* Header */
@@ -58,8 +57,8 @@ footer {
     position: fixed;
     top: 0;
     z-index: 1;
-    min-height: 10svh;
-    display: inline-flex;
+    min-height: var(--size-header-height);
+    display: flex;
     overflow-x: auto;
 }
 
@@ -70,14 +69,13 @@ footer {
 #header-img {
     max-width: 18vw;
     max-height: 8svh;
-    aspect-ratio: auto;
     object-fit: contain;
     margin: 1vw;
 }
 
 #header .title {
     max-width: 28vw;
-    font-size: clamp(0.5em, 1.5vw, 10em);
+    font-size: clamp(1rem, 1.5vw, 2rem);
     align-self: center;
     padding: 1vw;
 }
@@ -107,6 +105,7 @@ footer {
     color: var(--color-secondary);
     border-color: var(--color-secondary);
     font-size: clamp(0.5rem, 0.5vw + 0.5rem, 2rem);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 #nav-bar a:hover,
 #nav-bar a:focus {
@@ -124,13 +123,13 @@ footer {
 
 main {
     width: 100%;
-    padding: 11svh 0 2em 0;
+    padding: calc(var(--size-header-height) + 1em) 0 2em 0;
 }
 
 #welcome,
 #our-products,
 #about-us {
-    scroll-margin-top: 11svh;
+    scroll-margin-top: calc(var(--size-header-height) + 1em);
 }
 
 #welcome {
@@ -148,6 +147,13 @@ main {
 #sections .intro,
 .description {
     padding: 0 2em;
+}
+
+.intro p,
+.description p,
+.product-description p {
+    max-width: 75ch;
+    margin-inline: auto;
 }
 
 form {
@@ -180,7 +186,6 @@ form h2 {
     padding: 0.5em;
     width: 100%;
     min-width: fit-content;
-    vertical-align: center;
 }
 #email:valid {
     border-color: var(--color-feedback-success);
@@ -318,18 +323,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 600px) {
-
-    #product-cards {
-        grid-template-columns: 1fr;
-    }
-
-}
 
 
-@media screen and (max-width: 500px){
+
+@media screen and (max-width: 600px){
 
     #header {
+        position: static;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, minmax(1em, 1fr));
@@ -348,6 +348,20 @@ footer {
     }
     #nav-bar a {
         padding: 0.5em;
+    }
+
+    #welcome,
+    #our-products,
+    #about-us {
+        scroll-margin-top: 1em;
+    }
+
+    main {
+        padding-top: 1em;
+    }
+
+    #product-cards {
+        grid-template-columns: 1fr;
     }
 
 }
