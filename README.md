@@ -2,7 +2,7 @@
 Challenges from freeCodeCamp (https://www.freecodecamp.org/).
 
 A collection of projects I worked on while brushing up my responsive web design 
-skills through the freeCodeCamp Responsive Web Design curriculum.
+skills through the [freeCodeCamp Responsive Web Design curriculum (Version 9)](https://www.freecodecamp.org/learn/responsive-web-design-v9/).
 
 Enjoy my solutions and experiments!
 
@@ -54,7 +54,9 @@ This repository focuses on the foundations of responsive web design, with projec
    </div>
 
 ## Credits
-This repository contains projects completed while following the freeCodeCamp Responsive Web Design curriculum.
+
+This repository contains projects completed while following the 
+[freeCodeCamp Responsive Web Design curriculum (Version 9)](https://www.freecodecamp.org/learn/responsive-web-design-v9/).
 
 Third-party assets (such as fonts) remain the property of their respective authors and retain their original licenses.
 
